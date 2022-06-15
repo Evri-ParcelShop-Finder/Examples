@@ -7,70 +7,10 @@
     <title>ParcelShop Finder Integration</title>
   </head>
   <body>
-    <div>
-      <table>
-        <tr>
-          <td class="parcelShopColumn">
-            <div id="parcelShopFinderDIV"></div>
-          </td>
-          <td class="detailsColumn">
-            Source code: <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/index.html">HTML/JS</a>, 
-            <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/styles.css">CSS</a><br />
-            Selected ParcelShop:
-            <div >
-              <pre id="selectedParcelShop"></pre>
-            </div> 
-          </td>
-        </tr>
-      </table>
-    </div>
-    
-    <style>
-      iframe {
-        min-height: 100vh;
-      }
-
-      #selectedParcelShop {
-        white-space: pre-wrap;
-        min-width: 500px;
-      }
-
-      .parcelShopColumn {
-        width: 70%;
-      }
-
-      .detailsColumn {
-        width: 30%;
-      }
-
-    </style>
-
-    <script type="text/javascript">
-      window.addEventListener("DOMContentLoaded", () => {
-        window.loadParcelshopFinder({
-          infoPane: true,
-          search: true,
-          searchTerm: "SW1V 3NS",
-          hideFilters: false,
-          clientId: "githubExample",
-          selectable: true,
-          country: "GB",
-          containerElement: "#parcelShopFinderDIV",
-          cssLink: "https://evri-parcelshop-finder.github.io/examples/styles.css"
-        });
-      });
-    </script>
-    <script
-      src="https://www.evri.com/parcelshop-finder/en/main.js"
-      type="text/javascript"
-    ></script>
-
-    <script type="text/javascript">
-      window.addEventListener("evripsf-parcelshop_selected", (e) => {
-        element = document.getElementById("selectedParcelShop");
-        element.innerText = JSON.stringify(e.detail, null, '  ')
-      });
-      
-    </script>
+    Examples: 
+    <ul>
+        <li><a href="option3.html">Option 3</a></li>
+        <li><a href="option3-colours.html">Option 3 with colours</a></li>
+    </ul>
   </body>
 </html>
