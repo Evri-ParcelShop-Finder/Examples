@@ -14,16 +14,16 @@
             <div id="parcelShopFinderDIV"></div>
           </td>
           <td class="detailsColumn">
-            Source code: <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/index.html">HTML/JS</a><br />
+            Source code: <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/option3.html">HTML/JS</a><br />
             Selected ParcelShop:
             <div >
               <pre id="selectedParcelShop"></pre>
-            </div> 
+            </div>
           </td>
         </tr>
       </table>
     </div>
-    
+
     <style>
       iframe {
         min-height: 100vh;
@@ -68,7 +68,7 @@
         element = document.getElementById("selectedParcelShop");
         element.innerText = JSON.stringify(e.detail, null, '  ')
       });
-      
+
     </script>
   </body>
 </html>

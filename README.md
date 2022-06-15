@@ -17,7 +17,7 @@ We’ve teamed up with over 5000 local stores to make sure you have everything y
 The system enables you to search and select Evri ParcelShops and/or Lockers based on user inputs. The style and functionality are all available ‘out of the box’ and requires minimal development effort to embed this within existing web journeys.
 
 The Evri ParcelShop Finder can be implemented in the following ways:
-1. Direct customers to https://www.evri.com/find-a-parcel-shop#/
+1. Direct customers to https://www.evri.com/find-a-parcelshop
 2. Embed the Evri ParcelShop Finder into your own site (as an iFrame)
 3. Embed the Evri ParcelShop Finder into your site (using JavaScript). Please refer [this page](https://evri-parcelshop-finder.github.io/examples/) for an example.
 
