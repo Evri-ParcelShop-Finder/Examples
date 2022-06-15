@@ -4,45 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ParcelShop Finder Integration</title>
   </head>
   <body>
-    <div id="parcelShopFinderDIV"></div>
+    <div>
+      <table>
+        <tr>
+          <td class="parcelShopColumn">
+            <div id="parcelShopFinderDIV"></div>
+          </td>
+          <td class="detailsColumn">
+            Source code: <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/index.html">HTML/JS</a>, 
+            <a href="https://github.com/Evri-ParcelShop-Finder/examples/blob/main/styles.css">CSS</a><br />
+            Selected ParcelShop:
+            <div >
+              <pre id="selectedParcelShop"></pre>
+            </div> 
+          </td>
+        </tr>
+      </table>
+    </div>
+    
     <style>
       iframe {
         min-height: 100vh;
       }
 
-      :root {
-        --psf-color-primary: #000;
-        --psf-color-secondary: #000;
-        --psf-color-light: #000;
-        --psf-color-error: #000;
-        --psf-color-locker: #000;
-        --psf-color-links: #000;
-        --psf-color-icons: #000;
-        --psf-color-eco: #000;
-        --psf-border-color: #000;
-        --psf-border-color-active: #000;
-        --psf-border-light-color: #000;
-        --psf-divider-color: #000;
-        --psf-text-color-light: #000;
-        --psf-text-color-gray: #000;
-        --psf-text-color-dark: #000;
-        --psf-text-color-darkest: #000;
+      #selectedParcelShop {
+        white-space: pre-wrap;
+        min-width: 500px;
       }
+
+      .parcelShopColumn {
+        width: 70%;
+      }
+
+      .detailsColumn {
+        width: 30%;
+      }
+
     </style>
 
     <script type="text/javascript">
       window.addEventListener("DOMContentLoaded", () => {
         window.loadParcelshopFinder({
+          infoPane: true,
           search: true,
           searchTerm: "SW1V 3NS",
           hideFilters: false,
-          clientId: "2462",
+          clientId: "githubExample",
           selectable: true,
           country: "GB",
           containerElement: "#parcelShopFinderDIV",
+          cssLink: "https://evri-parcelshop-finder.github.io/examples/styles.css"
         });
       });
     </script>
@@ -53,16 +67,10 @@
 
     <script type="text/javascript">
       window.addEventListener("evripsf-parcelshop_selected", (e) => {
-        console.log("selected", e.detail.externalId);
-        sessionStorage.setItem("evri_cp", JSON.stringify(e.detail));
+        element = document.getElementById("selectedParcelShop");
+        element.innerText = JSON.stringify(e.detail, null, '  ')
       });
-
-
-      window.addEventListener("hermespsf-scripts_loaded", (e) => {
-        console.log("hermespsf-scripts_loaded");
-      });
+      
     </script>
-
-
   </body>
 </html>
