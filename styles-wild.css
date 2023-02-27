@@ -1,0 +1,18 @@
+:root {
+  --psf-color-primary: #0DE832;
+  --psf-color-secondary: #a2e64a;
+  --psf-color-light: #aa0de8;
+  --psf-color-error: #110de8;
+  --psf-color-locker: #e80d0d;
+  --psf-color-links: #6b72d4;
+  --psf-color-icons: #0a094d;
+  --psf-color-tabs-border: #0a5461;
+  --psf-border-color: #a4af0d;
+  --psf-border-color-active: #ffd102;
+  --psf-border-light-color: #ddb0f1;
+  --psf-divider-color: #300404;
+  --psf-text-color-light: #0de88d;
+  --psf-text-color-gray: #d9eb73;
+  --psf-text-color-dark: #ac2cac;
+  --psf-text-color-darkest: #272a47;
+}
